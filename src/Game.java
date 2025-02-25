@@ -22,11 +22,10 @@ public class Game {
     }
 
     public boolean gameOver() {
-        if (players[0].getScore() > 99) {
-            return true;
-        }
-        else if (players[1].getScore() > 99) {
-            return true;
+        for (Player player : players) {
+            if (player.getScore() > 99) {
+                return true;
+            }
         }
         return false;
     }
@@ -54,6 +53,6 @@ public class Game {
     }
 
     public void displayPlayerTurn(Player player, int roll1, int roll2) {
-        System.out.println(player.getName() + " has " + player.getScore() + " points, rolled " + roll1 + " and " + roll2);
+        System.out.println(player.getName() + " has " + player.getScore() + " points by rolling " + roll1 + " and " + roll2);
     }
 }
