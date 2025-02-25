@@ -49,11 +49,11 @@ public class Game {
                 player.updateScore(0);
             }
 
-            displayPlayerTurn(player);
+            displayPlayerTurn(player, roll1, roll2);
         }
     }
 
-    public void displayPlayerTurn(Player player) {
-        System.out.println(player.getName() + " has " + player.getScore() + " points");
+    public void displayPlayerTurn(Player player, int roll1, int roll2) {
+        System.out.println(player.getName() + " has " + player.getScore() + " points, rolled " + roll1 + " and " + roll2);
     }
 }
