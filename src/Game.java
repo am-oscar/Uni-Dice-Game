@@ -32,7 +32,9 @@ public class Game {
     }
 
     public void playRound() {
-        for (Player player : players) {
+        for (int i=0; i<getNumPlayers(); i++) {
+            Player player = getPlayer(i);
+
             dice.roll();
             int roll1 = dice.getValue();
             dice.roll();
@@ -46,6 +48,8 @@ public class Game {
             else if (roll1 == 1 && roll2 == 1) {
                 player.updateScore(0);
             }
+
+            displayPlayerTurn(player);
         }
     }
 
