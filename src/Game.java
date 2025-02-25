@@ -48,4 +48,8 @@ public class Game {
             }
         }
     }
+
+    public void displayPlayerTurn(Player player) {
+        System.out.println(player.getName() + " has " + player.getScore() + " points");
+    }
 }
