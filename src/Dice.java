@@ -9,11 +9,11 @@ public class Dice {
         value = random.nextInt(6) + 1;
     }
 
-    private void roll() {
+    public void roll() {
         value = random.nextInt(6) + 1;
     }
 
-    private int getValue() {
+    public int getValue() {
         return value;
     }
 }
