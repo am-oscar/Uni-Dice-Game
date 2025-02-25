@@ -12,7 +12,12 @@ public class Player {
     }
 
     public void updateScore(int points) {
-        score = points;
+        if (points == -1) {
+            score = 0;
+        }
+        else {
+            score += points;
+        }
     }
 
     public int getScore() {

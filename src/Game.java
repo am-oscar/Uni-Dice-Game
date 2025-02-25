@@ -47,12 +47,11 @@ public class Game {
             int roll2 = dice.getValue();
 
             if (roll1 != 1 && roll2 != 1) {
-                int totalScore = player.getScore();
                 int gainedScore = roll1 + roll2;
-                player.updateScore(totalScore + gainedScore);
+                player.updateScore(gainedScore);
             }
             else if (roll1 == 1 && roll2 == 1) {
-                player.updateScore(0);
+                player.updateScore(-1);
             }
 
             displayPlayerTurn(player, roll1, roll2);
