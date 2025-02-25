@@ -22,7 +22,9 @@ public class Game {
     }
 
     public boolean gameOver() {
-        for (Player player : players) {
+        for (int i=0; i<getNumPlayers(); i++) {
+            Player player = getPlayer(i);
+
             if (player.getScore() > 99) {
                 return true;
             }
